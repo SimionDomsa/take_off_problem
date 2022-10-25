@@ -13,7 +13,7 @@ for person in file_lines:
     try:
         name, surname, date = person.split()
     except ValueError:
-        raise ValueError("Entries should be in the order of surname name date")
+        raise ValueError("Entries should be in the order of name surname date")
 
     dob = datetime.strptime(date, '%Y-%m-%d')
     families[surname].append((name, dob))
